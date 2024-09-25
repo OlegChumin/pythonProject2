@@ -3,6 +3,7 @@ import tkinter as tk
 is_hello = True
 is_text_color = True
 
+
 def change_text():
     global is_hello
     if is_hello:
@@ -12,7 +13,12 @@ def change_text():
     is_hello = not is_hello
 
 def change_color():
-    window_text.config(fg="lime", bg="black")
+    global is_text_color
+    if is_text_color:
+        window_text.config(fg="lime", bg="black")
+    else:
+        window_text.config(fg="white", bg="blue")
+    is_text_color = not is_text_color
 
 def change_bg_color():
     global current_color

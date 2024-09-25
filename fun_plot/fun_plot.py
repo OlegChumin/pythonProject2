@@ -7,6 +7,8 @@ x = np.linspace(-2 * np.pi, 2 * np.pi, 400)
 # Вычисляем значения y для косинуса и синуса
 y_cos = np.cos(x)
 y_sin = np.sin(x)
+y_tan = np.tan(x)
+y_ctg = np.cos(x) / np.sin(x)
 
 # Создаем график
 plt.figure(figsize=(10, 6))
@@ -15,12 +17,16 @@ plt.figure(figsize=(10, 6))
 plt.plot(x, y_cos, color='red', label='cos(x)')
 # График синуса (синий)
 plt.plot(x, y_sin, color='blue', label='sin(x)')
+# График тангенса (коричневый)
+plt.plot(x, y_tan, color='brown', label='tan(x)')
+# График котангенса (желтый)
+plt.plot(x, y_ctg, color='yellow', label='ctg(x)')
 
 # Добавляем координатную сетку
 plt.grid(True)
 
 # Добавляем заголовок и метки осей
-plt.title('Графики функций cos(x) и sin(x)')
+plt.title('Графики функций cos(x), sin(x), tan(x), ctg(x) ')
 plt.xlabel('x')
 plt.ylabel('y')
 
